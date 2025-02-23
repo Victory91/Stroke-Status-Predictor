@@ -1,47 +1,55 @@
-# Stroke-Status-Predictor
+# Stroke-Prediction-Model
 
-Project Overview
+# Project Overview
 Develop a model to predict stroke events using a diverse range of demographic, lifestyle, and clinical attributes, ensuring a holistic representation of potential disease determinants.
 
-Table of Contents
-Introduction
-Dataset
-Project Structure
-Results
-Contibuting
-License
-Acnowledgements
-Introduction
+# Table of Contents
+- Introduction
+- Dataset
+- Project Structure
+- Results
+- Contibuting
+- License
+- Acknowledgements
+
+# Introduction
 This project aims to create a predictive model for stroke occurrences by leveraging a comprehensive dataset encompassing various factors influencing health. Beginning with multiple linear regression, we progressed to more advanced models to improve prediction accuracy and address challenges like class imbalance.
 
-Dataset
+# Dataset
 The dataset includes:
 
-Numerical Features:
-Age
-Average Glucose Level (avg_glucose_level)
-Body Mass Index (bmi)
-Categorical Features:
-Gender
-Hypertension
-Heart Disease
-Ever Married
-Work Type
-Residence Type
-Smoking Status
-Target Variable:
+- Numerical Features:
+
+1. Age
+2. Average Glucose Level (avg_glucose_level)
+3. Body Mass Index (bmi)
+
+- Categorical Features:
+
+1. Gender
+2. Hypertension
+3. Heart Disease
+4. Ever Married
+5. Work Type
+6. Residence Type
+7. Smoking Status
+
+- Target Variable:
+
 Stroke (0: No Stroke, 1: Stroke)
 
-Results and Analysis:
+# Results and Analysis:
+
 Review the results and visualizations in the notebook
 
-Project Structure
+# Project Structure
+```markdown
 stroke-prediction-model/
 ├── data/
 │   └── healthcare_dataset_stroke_data
 ├── notebooks/
 │   ├── 1_data_preprocessing_and_eda.ipynb
-│   ├── 2_gradient_boosting_classifier.ipynb
+│   └── 2_gradient_boosting_classifier.ipynb
 ├── results/
 │   ├── figures/
 │   └── model_performance_metrics.txt
@@ -52,25 +60,32 @@ stroke-prediction-model/
 ├── requirements.txt
 ├── README.md
 └── LICENSE
-Results
-Baseline Model (Gradiebt Booster Classifier):
+```
 
-MAE: Value
+# Results
 
-R²: Value
+Baseline Model: DummyRegression
 
-Observations: [Brief summary]
-Enhanced Model (Logistic Regression):
-ROC AUC Score: Value
+MAE: 0.097
 
-Improved recall and precision for stroke prediction.
+Mean prediction: 0.05
 
-Key Findings:
-Age, average glucose level, and hypertension were significant predictors.
+# Observations: [Brief summary]
+
+# Model (GradientBoosting Classifier):
+
+MAE: 0.052
+
+Improved recall and precision for stroke prediction of 0 = No Stroke
+
+# Key Findings:
+
+Age, average glucose level, and hypertension were significant predictors with age having the highest feature importance
 
 Lifestyle factors like smoking status also influenced stroke risk.
 
-Contributing
+# Contributing
+
 Contributions are welcome! Please follow these steps:
 
 Fork the repository.
@@ -83,10 +98,11 @@ Push to the branch: git push origin feature/your_feature
 
 Create a pull request.
 
-License
+# License
+
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-Acknowledgments
+# Acknowledgments
+
 Thanks to AbdulQudus for support.
 
-Appreciation to the data providers.
