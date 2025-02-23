@@ -20,10 +20,11 @@ if st.button("Predict"):
   # take the stroke value, and format the value the right way
     prediction = model.predict([[age, bmi, avg_glucose_level]])[0].round(0)
   # Map the prediction to the corresponding message
-    if prediction == 0:
-      status = "No stroke"
-    else:
-      status = "Stroke"
+  # Show result
+            if prediction == 1: 
+                st.success("**Stroke**")
+            else:
+                st.error("**No Stroke**")
 
 # Display the result on the Streamlit app
-st.write("The predicted stroke status is", status)
+st.write("The predicted stroke status is", prediction)
