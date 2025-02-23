@@ -5,7 +5,7 @@ import pandas as pd
 
 # load the file that contains the model (model.pkl)
 with open("model.pkl", "rb") as f:
-  prediction = pickle.load(f)
+  model = pickle.load(f)
 
 # give the Streamlit app page a title
 st.title("Stroke Predictor")
