@@ -3,7 +3,7 @@ import pickle
 import streamlit as st
 import pandas as pd
 
-# load the file that contains the model (model.pkl)
+# load the file that contains the model (model1.pkl)
 with open("model1.pkl", "rb") as f:
   model = pickle.load(f)
 
