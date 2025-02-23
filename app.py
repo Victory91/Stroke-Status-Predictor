@@ -27,4 +27,4 @@ if st.button("Predict"):
         st.error("**No Stroke**")
 
 # Display the result on the Streamlit app
-st.write("The predicted stroke status is", {prediction})
+st.write(f"The predicted stroke status is, {prediction})
